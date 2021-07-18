@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<header>
+		<form action="schedule.html">
+		    <input id="scheduleBtn" type="submit" value="Schedule" />
+		</form>
+		<form action="index.html">
+		    <input id="mapBtn" type="submit" value="Map" />
+		</form>
+	</header>
+	<body>
+		<div id>
+			<div id=user-wrap2>
+			
+				<div id="tasks">
+					<div id="userinput">
+						<div id="inputHeader">
+							<label for="whatDay">Choose a slot</label>
+								<select id="whatDay" >
+							    	<option value="1">Monday</option>
+							    	<option value="2">Tuesday</option>
+							    	<option value="3">Wednesday</option>
+							    	<option value="4">Thursday</option>
+							    	<option value="5">Friday</option>
+							    	<option value="6">Saturday</option>
+							    	<option value="7">Sunday</option>
+								</select>
+								<select id="whatTime">
+									<option value="1">8 AM</option>
+									<option value="2">9 AM</option>
+									<option value="3">10 AM</option>
+									<option value="4">11 AM</option>
+									<option value="5">12 PM</option>
+									<option value="6">1 PM</option>
+									<option value="7">2 PM</option>
+									<option value="8">3 PM</option>
+									<option value="9">4 PM</option>
+									<option value="10">5 PM</option>
+									<option value="11">6 PM</option>
+									<option value="12">7 PM</option>
+									<option value="13">8 PM</option>
+								</select>
+							<button id="setTimeBtn">Set Time</button>
+							<button id="setScheduleBtn">Set Schedule</button> 
+						</div>
+						<div id="list-wrap">
+							<ol id='list'>
+								<li>Starbucks</li>
+								<li>McDonald's</li>
+								<li>Movies</li>
+							</ol>
+					
+						</div>
+					</div>
+				</div>
+				
+			</div>
+	
+			
+			<!--<form action="/~/bon-voyage-hackathon/open/schedule-data" method="POST" enctype="multipart/form-data">-->
+			<!-- Add input fields to store data -->
+			<!-- Submit button to send form data-->
+			<!--	<input type="submit" value="Submit">-->
+			<!--</form>-->
+			
+			<div class="schedule">
+				<table class="schedule-table">
+					<tr class="times">
+						<td class="time"></td>
+						<th>M</th>
+						<th>T</th>
+						<th>W</th>
+						<th>Th</th>
+						<th>F</th>
+						<th>Sat</th>
+						<th>Sun</th>
+					</tr>
+					<tr class="times">
+						<td class="time"> 8am </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 9am </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 10am </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 11am </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 12pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 1pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 2pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 3pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 4pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 5pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 6pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 7pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+					<tr class="times">
+						<td class="time"> 8pm </td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+						<td class="timeslot" height="50px"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var dayInput = document.getElementById('whatDay').value;
+			var timeInput = document.getElementById('whatTime').value;
+			document.getElementById('whatDay').onchange = function (event) {
+				event.preventDefault();
+				console.log(event)
+				dayInput = event.target.value
+			}
+			
+			
+			var API_KEY = 'SLo2C6kdpi8qsegPF0yG5Sbbbpg8Tyjo';
+			document.getElementById('setTimeBtn').onclick = function () { 
+				console.log(dayInput);
+				console.log();
+				
+				const times = document.querySelectorAll('td.timeslot');
+				console.log(times)
+				
+				if (dayInput==4){
+					times[24].style.backgroundColor = 'red';
+					times[24].innerHTML = "Starbucks";
+				}
+				
+				if (dayInput==6){
+					times[33].style.backgroundColor = 'red';
+					times[33].innerHTML = "Movies";
+				}
+				
+				if (dayInput==2){
+					times[36].style.backgroundColor = 'red';
+					times[36].innerHTML = "McDonalds";
+				}
+				
+				// for (var i = 0; i < times.length; i++) {
+				// 	if (i % 7 == dayInput - 1) {
+				// 		times[i][i].style.backgroundColor = 'red'
+				// 	}
+				// }
+				
+				
+				
+				
+				
+				
+				// const rows = document.getElementsByClassName("schedule-table")[0].childNodes[1];
+				// console.log(rows.childNodes)
+				
+				// rows.childNodes.forEach(row => {
+				// 	console.log(typeof(row))
+				// 	console.log(row)
+				// 	// row.children[dayInput].style.backgroundColor = 'red'
+				// });
+				// $("tr:nth-child(dayInput)").addClass("selected")
+			};
+		</script>
+	</body>
+	
+</html>
